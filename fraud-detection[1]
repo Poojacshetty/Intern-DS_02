@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Credit Card Transactions Fraud Detection Dataset | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Simulated Credit Card Transactions generated using Sparkov" />
+    <meta name="keywords" content="finance,video games,e-commerce services" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="JoqJdqFc5eixT3jBoW2Vcg==" type="text/javascript">
+    window["pageRequestStartTime"] = 1726841270694;
+    window["pageRequestEndTime"] = 1726841270764;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <script nonce="JoqJdqFc5eixT3jBoW2Vcg==" id="gsi-client" src="https://accounts.google.com/gsi/client" async defer></script>
+  <script nonce="JoqJdqFc5eixT3jBoW2Vcg==">window.KAGGLE_JUPYTERLAB_PATH = "/static/jl2-static/jupyterlab-index-de53cf5bbd46ca5e45d1.html";</script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:FILL@0..1&display=block"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:FILL@0..1&display=block"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="JoqJdqFc5eixT3jBoW2Vcg==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+
+    <link rel="canonical" href="https://www.kaggle.com/datasets/kartik2112/fraud-detection" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=dne" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=3db623c8f8b020193191" />
+
+  
+    
+ 
+      <script nonce="JoqJdqFc5eixT3jBoW2Vcg==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="JoqJdqFc5eixT3jBoW2Vcg==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T7QHS60L4Q', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="JoqJdqFc5eixT3jBoW2Vcg==" async src="https://www.googletagmanager.com/gtag/js?id=G-T7QHS60L4Q"></script>
+
+  
+    
+    <meta property="og:url" content="https://www.kaggle.com/datasets/kartik2112/fraud-detection" />
+    <meta property="og:title" content="Credit Card Transactions Fraud Detection Dataset" />
+    <meta property="og:description" content="Simulated Credit Card Transactions generated using Sparkov" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/817870/1399887/26b35643714abef2901eed60f73f6cb7/dataset-card.jpg?t=2020-08-05-15-23-22" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+            <script nonce="JoqJdqFc5eixT3jBoW2Vcg==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"Credit Card Transactions Fraud Detection Dataset","description":"# About the Dataset\n\nThis is a simulated credit card transaction dataset containing legitimate and fraud transactions from the duration 1st Jan 2019 - 31st Dec 2020. It covers credit cards of 1000 customers doing transactions with a pool of 800 merchants.\n\n# Source of Simulation\n\nThis was generated using [Sparkov Data Generation | Github](https://github.com/namebrandon/Sparkov_Data_Generation) tool created by Brandon Harris. This simulation was run for the duration - 1 Jan 2019 to 31 Dec 2020. The files were combined and converted into a standard format.\n\n\n# Information about the Simulator\n\nI do not own the simulator. I used the one used by Brandon Harris and just to understand how it works, I went through few portions of the code. This is what I understood from what I read:\n\nThe simulator has certain pre-defined list of merchants, customers and transaction categories. And then using a python library called \"faker\", and with the number of customers, merchants that you mention during simulation, an intermediate list is created.\n\nAfter this, depending on the profile you choose for e.g. \"adults 2550 female rural.json\" (which means simulation properties of adult females in the age range of 25-50 who are from rural areas), the transactions are created. Say, for this profile, you could check [\"Sparkov | Github | adults_2550_female_rural.json\"](https://github.com/namebrandon/Sparkov_Data_Generation/blob/master/profiles/adults_2550_female_rural.json), there are parameter value ranges defined in terms of min, max transactions per day, distribution of transactions across days of the week and normal distribution properties (mean, standard deviation) for amounts in various categories. Using these measures of distributions, the transactions are generated using faker.\n\nWhat I did was generate transactions across all profiles and then merged them together to create a more realistic representation of simulated transactions.\n\n# Acknowledgements\n\n* Brandon Harris for his amazing work in creating this easy-to-use simulation tool for creating fraud transaction datasets.","url":"https://www.kaggle.com/kartik2112/fraud-detection","version":1,"keywords":["subject, people and society, business, finance","subject, culture and humanities, games, video games","subject, people and society, business, e-commerce services"],"license":{"@type":"CreativeWork","name":"CC0: Public Domain","url":"https://creativecommons.org/publicdomain/zero/1.0/"},"identifier":["817870"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"Kartik Shenoy","url":"https://www.kaggle.com/kartik2112","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/966605-gp.jpg"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/kartik2112/fraud-detection/download?datasetVersionNumber=1","contentSize":"211766662 bytes"}],"commentCount":9,"dateModified":"2020-08-05T15:20:55.217Z","discussionUrl":"https://www.kaggle.com/kartik2112/fraud-detection/discussion","alternateName":"Simulated Credit Card Transactions generated using Sparkov","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/817870/1399887/26b35643714abef2901eed60f73f6cb7/dataset-card.jpg?t=2020-08-05-15-23-22","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":9},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":55854},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":399285},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":409}]}</script>
+        
+
+  
+    
+
+  
+    
+
+
+    <script nonce="JoqJdqFc5eixT3jBoW2Vcg==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="JoqJdqFc5eixT3jBoW2Vcg==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="JoqJdqFc5eixT3jBoW2Vcg==" src="/static/assets/runtime.js?v=3213cae93497393cda62"></script>
+  <script nonce="JoqJdqFc5eixT3jBoW2Vcg==" src="/static/assets/vendor.js?v=08424585084800a998f6"></script>
+  <script nonce="JoqJdqFc5eixT3jBoW2Vcg==" src="/static/assets/app.js?v=0f4ceeb0e81e36b85f95"></script>
+    <script nonce="JoqJdqFc5eixT3jBoW2Vcg==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+<body>
+<main>
+    
+
+
+
+
+
+<div id="site-container"></div>
+
+<div id="site-body" class="hide">
+    
+
+
+<script nonce="JoqJdqFc5eixT3jBoW2Vcg==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: ["Safe.js"],
+    });
+</script>
+<script type="text/javascript" nonce="JoqJdqFc5eixT3jBoW2Vcg==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    // Always use the production asset in local dev, which is served from GCS. We tried to proxy and / or serve this
+    // in a better way in localhost, but it didn't work out. See b/328073416#comment8 for details.
+    const forceProdHost = window.location.hostname === "localhost";
+    lib.src = `${forceProdHost ? "https://www.kaggle.com" : ""}/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>
